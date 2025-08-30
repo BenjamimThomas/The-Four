@@ -6,7 +6,7 @@ using System.Collections;
 public class BotaoStart : MonoBehaviour
 {
     public string Game;
-    public float delayEmSegundos = 1f; // define o delay antes de ir para a cena
+    public float delayEmSegundos = 1f; 
 
     void Start()
     {
