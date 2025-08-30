@@ -1,18 +1,21 @@
 using UnityEngine;
 using TMPro; // só se estiver usando TextMeshPro
 using UnityEngine.UI; // se usar Text normal
-public class TipoTexto : MonoBehaviour
+public class Diálogo : MonoBehaviour
 {
-    public TMP_Text textoUI; 
-    public string textoCompleto; 
-    public float velocidade = 0.05f; 
-    private void Start()
+    public TMP_Text textoUI; // arraste o seu TMP_Text aqui
+    public string textoCompleto; // o texto que vai aparecer
+    public float velocidade = 0.05f; // tempo entre cada letra
 
+    private void Start()
     {
-        textoUI.text = "";
+        textoUI.text = ""; // começa vazio
+        ComecarDialogo(); // inicia o dialogo sozinho
     }
+
     public void ComecarDialogo()
     {
+        StopAllCoroutines(); // evita bugs se clicar várias vezes
         StartCoroutine(MostrarTexto());
     }
 
@@ -26,4 +29,3 @@ public class TipoTexto : MonoBehaviour
         }
     }
 }
-
