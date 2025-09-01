@@ -3,25 +3,29 @@ using UnityEngine.UI;
 using System.Collections;
 using TMPro;
 
-
-
 public class GameManager : MonoBehaviour
 {
     [Header("Referências")]
     public GameObject alvoPrefab;
-    public Transform canvas;      // Canvas (RectTransform)
+    public Transform canvas;
     public TMP_Text scoreText;
     public TMP_Text vidasText;
     public TMP_Text gameOverText;
     public Image erroFlash;
 
     [Header("Regras")]
-    public float tempoLimite = 2f;     // tempo para clicar no alvo
-    public int vidasIniciais = 3;      // vidas
-    public float spawnAnimDuration = 0.2f; // duração da animação de aparecer
+    public float tempoLimite = 2f;
+    public int vidasIniciais = 3;
+    public float spawnAnimDuration = 0.2f;
 
     [Header("Limites de spawn (margem)")]
-    public Vector2 margem = new Vector2(20f, 20f); // margem da borda da tela
+    public Vector2 margem = new Vector2(20f, 20f);
+
+    [Header("Sons")]
+    public AudioSource audioSource;   // arraste um AudioSource no Inspector
+    public AudioClip somAcerto;       // som quando acertar
+    public AudioClip somErro;         // som quando errar
+    public AudioClip somGameOver;     // som quando acabar o jogo
 
     private int score = 0;
     private int vidas;
@@ -46,7 +50,6 @@ public class GameManager : MonoBehaviour
 
         alvoAtual = Instantiate(alvoPrefab, canvas);
 
-        // posição aleatória segura dentro do Canvas
         RectTransform canvasRT = canvas as RectTransform;
         RectTransform rt = alvoAtual.GetComponent<RectTransform>();
 
@@ -66,14 +69,15 @@ public class GameManager : MonoBehaviour
             score++;
             scoreText.text = "Acertos: " + score;
 
+            // toca som de acerto
+            if (audioSource && somAcerto) audioSource.PlayOneShot(somAcerto);
+
             if (tempoCoroutine != null) StopCoroutine(tempoCoroutine);
             SpawnAlvo();
         };
 
-        // anima o aparecer
         alvoScript.Aparecer(spawnAnimDuration, 1f);
 
-        // inicia o cronômetro de reação
         tempoCoroutine = StartCoroutine(TempoDeReacao());
     }
 
@@ -87,6 +91,7 @@ public class GameManager : MonoBehaviour
             PerderVida();
         }
     }
+
     IEnumerator FlashErro()
     {
         erroFlash.gameObject.SetActive(true);
@@ -99,6 +104,9 @@ public class GameManager : MonoBehaviour
         vidas--;
         vidasText.text = "Vidas: " + vidas;
         StartCoroutine(FlashErro());
+
+        // toca som de erro
+        if (audioSource && somErro) audioSource.PlayOneShot(somErro);
 
         if (vidas > 0)
         {
@@ -114,5 +122,8 @@ public class GameManager : MonoBehaviour
     {
         gameOverText.gameObject.SetActive(true);
         gameOverText.text = "GAME OVER\nPontuação: " + score;
+
+        // toca som de game over
+        if (audioSource && somGameOver) audioSource.PlayOneShot(somGameOver);
     }
 }
