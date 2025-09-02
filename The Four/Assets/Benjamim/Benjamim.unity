@@ -773,7 +773,7 @@ MonoBehaviour:
   vidasText: {fileID: 491221048}
   gameOverText: {fileID: 1491244105}
   erroFlash: {fileID: 706762888}
-  tempoLimite: 1.2
+  tempoLimite: 0.8
   vidasIniciais: 3
   spawnAnimDuration: 0.2
   margem: {x: 20, y: 20}
