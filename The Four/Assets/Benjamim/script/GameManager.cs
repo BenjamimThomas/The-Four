@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public TMP_Text scoreText;
     public TMP_Text vidasText;
     public TMP_Text gameOverText;
+    public TMP_Text vitoriaText;
     public Image erroFlash;
 
     [Header("Regras")]
@@ -22,10 +23,11 @@ public class GameManager : MonoBehaviour
     public Vector2 margem = new Vector2(20f, 20f);
 
     [Header("Sons")]
-    public AudioSource audioSource;   // arraste um AudioSource no Inspector
-    public AudioClip somAcerto;       // som quando acertar
-    public AudioClip somErro;         // som quando errar
-    public AudioClip somGameOver;     // som quando acabar o jogo
+    public AudioSource audioSource;
+    public AudioClip somAcerto;
+    public AudioClip somErro;
+    public AudioClip somGameOver;
+    public AudioClip somVitoria;
 
     private int score = 0;
     private int vidas;
@@ -38,6 +40,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Acertos: 0";
         vidasText.text = "Vidas: " + vidas;
         gameOverText.gameObject.SetActive(false);
+        if (vitoriaText) vitoriaText.gameObject.SetActive(false);
 
         SpawnAlvo();
     }
@@ -69,8 +72,13 @@ public class GameManager : MonoBehaviour
             score++;
             scoreText.text = "Acertos: " + score;
 
-            // toca som de acerto
             if (audioSource && somAcerto) audioSource.PlayOneShot(somAcerto);
+
+            if (score >= 50)
+            {
+                Vitoria();
+                return;
+            }
 
             if (tempoCoroutine != null) StopCoroutine(tempoCoroutine);
             SpawnAlvo();
@@ -105,7 +113,6 @@ public class GameManager : MonoBehaviour
         vidasText.text = "Vidas: " + vidas;
         StartCoroutine(FlashErro());
 
-        // toca som de erro
         if (audioSource && somErro) audioSource.PlayOneShot(somErro);
 
         if (vidas > 0)
@@ -121,9 +128,21 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
-        gameOverText.text = "GAME OVER\nPontuação: " + score;
+        gameOverText.text = "Voce e seus homens falharam\nPontuação: " + score;
 
-        // toca som de game over
         if (audioSource && somGameOver) audioSource.PlayOneShot(somGameOver);
+    }
+
+    void Vitoria()
+    {
+        if (vitoriaText)
+        {
+            vitoriaText.gameObject.SetActive(true);
+            vitoriaText.text = "Parabéns, vocês conseguiu saquear Constantinopla\nPontuação: " + score;
+        }
+
+        if (audioSource && somVitoria) audioSource.PlayOneShot(somVitoria);
+
+        if (alvoAtual != null) Destroy(alvoAtual);
     }
 }

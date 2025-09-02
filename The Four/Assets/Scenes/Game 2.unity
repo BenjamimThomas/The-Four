@@ -551,12 +551,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoUI: {fileID: 486615272}
-  textoCompleto: "Lider: Homens, uma miss\xE3o nos foi dada. Vamos a Jerusal\xE9m
-    reconquistar o que nos pertence. Mostraremos ao Papa Inoc\xEAncio III que somos
-    capazes.\n\nHomens: Mas, senhor, precisamos de recursos. Os mu\xE7ulmanos j\xE1
-    devem ter se aproveitado de tudo o que t\xEDnhamos: casas, comidas, animais.\n\nLider:
-    Voc\xEA tem raz\xE3o, homem. Vamos ver o que o Papa Inoc\xEAncio III nos diz
-    sobre isso."
+  textoCompleto: "Lider: Homens, uma miss\xE3o nos foi dada. Vamos a Terra Santa
+    conquistar o que ainda n\xE3o nos pertence. Mostraremos ao Papa Inoc\xEAncio
+    III que somos capazes.\n\nHomens: Mas, senhor, precisamos de recursos. Os mu\xE7ulmanos
+    j\xE1 devem ter se aproveitado de tudo: casas, comidas, animais.\n\nLider: Voc\xEA
+    tem raz\xE3o, homem. Vamos ver o que o Papa Inoc\xEAncio III nos diz sobre isso."
   velocidade: 0.01
   audioSource: {fileID: 486615270}
   somLetra: {fileID: 0}

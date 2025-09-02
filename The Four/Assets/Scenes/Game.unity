@@ -847,7 +847,7 @@ MonoBehaviour:
   textoUI: {fileID: 1637578626}
   textoCompleto: "Papa Inoc\xEAncio III: Ah, voc\xEA finalmente chegou, at\xE9 parece
     que eu n\xE3o estou em risco de vida. Por onde andou? Enfim, isso n\xE3o importa
-    agora, n\xE3o perca tempo, corra e reconquiste Jerusalem daqueles mu\xE7ulmanos,
+    agora, n\xE3o perca tempo, corra e conquiste a Terra Santa daqueles mu\xE7ulmanos,
     espalhe para todos...\n\nV\xE1 agora!!!\n\nLider: Entendido"
   velocidade: 0.01
   audioSource: {fileID: 1637578629}

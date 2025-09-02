@@ -269,7 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoUI: {fileID: 34471370}
   textoCompleto: "Prepare-se! A guerra come\xE7a agora!\nFa\xE7a 50 pontos e saqueie
-    Constantinopla."
+    Constantinopla.\n(Seja rapido)"
   velocidade: 0.01
   audioSource: {fileID: 34471368}
   somLetra: {fileID: 0}
