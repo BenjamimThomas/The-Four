@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Clique para continuar...
+  m_text: Ir para a batalha...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4b775fd2e279fd04a962470b83154b52, type: 2}
   m_sharedMaterial: {fileID: -7489765113027175155, guid: 4b775fd2e279fd04a962470b83154b52, type: 2}
@@ -404,9 +404,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoUI: {fileID: 197043047}
-  textoCompleto: 'Em andamento...
-
-'
+  textoCompleto: "Papa Inoc\xEAncio III: Sim, ele tem raz\xE3o. Podemos ir para Constantinopla,
+    um lugar onde o Imp\xE9rio Bizantino possui de tudo um pouco.\n\nLider: Sim,
+    eu sei mas, senhor, e as nossas terras?\n\nPapa Inoc\xEAncio III: N\xF3s temos
+    que entender que n\xE3o faz mais sentido tentar reconquistar algo que j\xE1 foi
+    saqueado. Ap\xF3s chegar l\xE1, perder muitos de nossos homens e n\xE3o encontrar
+    mais nada, de que adiantaria?"
   velocidade: 0.01
   audioSource: {fileID: 197043045}
   somLetra: {fileID: 0}
@@ -637,8 +640,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 381.64005, y: -200.02}
-  m_SizeDelta: {x: 302.29, y: 94.56}
+  m_AnchoredPosition: {x: 401, y: -204}
+  m_SizeDelta: {x: 302.29, y: 69.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &704311221
 MonoBehaviour:
@@ -1065,7 +1068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c18a540a6d50c46bc5ab5c4578c7a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogoContinuacao: Benjamim
+  DialogoContinuacao: Pre Batalha
 --- !u!4 &1660627438
 Transform:
   m_ObjectHideFlags: 0

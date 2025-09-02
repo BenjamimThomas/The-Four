@@ -295,8 +295,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Vidas: 3'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4b775fd2e279fd04a962470b83154b52, type: 2}
+  m_sharedMaterial: {fileID: -7489765113027175155, guid: 4b775fd2e279fd04a962470b83154b52, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -779,8 +779,8 @@ MonoBehaviour:
   margem: {x: 20, y: 20}
   audioSource: {fileID: 1445190030}
   somAcerto: {fileID: 8300000, guid: c5dea467677cdd449a7f8190f8453783, type: 3}
-  somErro: {fileID: 8300000, guid: b1790fe4dfa754e96a722bad2b5aaff1, type: 3}
-  somGameOver: {fileID: 8300000, guid: 7f1f4a3c9cc174774afe09b5e51617ee, type: 3}
+  somErro: {fileID: 8300000, guid: 7f1f4a3c9cc174774afe09b5e51617ee, type: 3}
+  somGameOver: {fileID: 0}
 --- !u!4 &1445190029
 Transform:
   m_ObjectHideFlags: 0
@@ -806,8 +806,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d1e17aeb0e90b264ba7dde6c297b025b, type: 3}
-  m_Resource: {fileID: 8300000, guid: d1e17aeb0e90b264ba7dde6c297b025b, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -1352,8 +1352,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Acertos: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4b775fd2e279fd04a962470b83154b52, type: 2}
+  m_sharedMaterial: {fileID: -7489765113027175155, guid: 4b775fd2e279fd04a962470b83154b52, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

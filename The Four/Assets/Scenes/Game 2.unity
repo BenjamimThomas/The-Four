@@ -551,7 +551,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textoUI: {fileID: 486615272}
-  textoCompleto: Em andamento...
+  textoCompleto: "Lider: Homens, uma miss\xE3o nos foi dada. Vamos a Jerusal\xE9m
+    reconquistar o que nos pertence. Mostraremos ao Papa Inoc\xEAncio III que somos
+    capazes.\n\nHomens: Mas, senhor, precisamos de recursos. Os mu\xE7ulmanos j\xE1
+    devem ter se aproveitado de tudo o que t\xEDnhamos: casas, comidas, animais.\n\nLider:
+    Voc\xEA tem raz\xE3o, homem. Vamos ver o que o Papa Inoc\xEAncio III nos diz
+    sobre isso."
   velocidade: 0.01
   audioSource: {fileID: 486615270}
   somLetra: {fileID: 0}
@@ -735,7 +740,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 381.64005, y: -200.02}
+  m_AnchoredPosition: {x: 401, y: -204}
   m_SizeDelta: {x: 302.29, y: 94.56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1086929830
